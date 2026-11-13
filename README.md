@@ -1,5 +1,7 @@
 # Avaliação Prática — Prova 02 · Teste e Qualidade de Software
 
+[![Testes](https://github.com/Gustavo-Pasquini/prova02-teste-software/actions/workflows/testes.yml/badge.svg)](https://github.com/Gustavo-Pasquini/prova02-teste-software/actions/workflows/testes.yml)
+
 Repositório único com a solução das três atividades da avaliação prática
 (Semanas 10, 11 e 14), a partir do material da disciplina em
 [JoaoChoma/teste_software_2026](https://github.com/JoaoChoma/teste_software_2026).
@@ -94,6 +96,19 @@ Ver o [README da Semana 14](semana14-teste-usuario/README.md).
 for p in semana10-tdd/*/; do (cd "$p" && mvn -q verify); done
 (cd semana11-integracao-springboot && mvn -q test)
 ```
+
+## Integração contínua
+
+A cada `push` e a cada *pull request* para `main`, o workflow
+[`.github/workflows/testes.yml`](.github/workflows/testes.yml) executa
+`mvn verify` nos cinco projetos, em paralelo (um job por projeto), sobre Java 17.
+
+- Nos quatro projetos da Semana 10, a fase `verify` dispara o `jacoco:check`:
+  **se a cobertura cair abaixo de 100%, o build falha** — a regra de cobertura
+  total passa a valer também no servidor, e não só na máquina de quem escreveu
+  o código.
+- Os relatórios de cobertura (JaCoCo) e de execução (Surefire) ficam disponíveis
+  como artefatos de cada execução, na aba **Actions**.
 
 ## Estrutura
 

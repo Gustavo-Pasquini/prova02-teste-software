@@ -1,0 +1,66 @@
+name: Testes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  testes:
+    name: ${{ matrix.nome }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - nome: "SEMANA 10 - bubblesort"
+            pasta: semana10-tdd/bubblesort-tdd
+            artefato: semana10-bubblesort
+          - nome: "SEMANA 10 - carrinho de compras"
+            pasta: semana10-tdd/carrinho-compras-tdd
+            artefato: semana10-carrinho-compras
+          - nome: "SEMANA 10 - conta bancaria"
+            pasta: semana10-tdd/conta-bancaria-tdd-maven
+            artefato: semana10-conta-bancaria
+          - nome: "SEMANA 10 - estoque"
+            pasta: semana10-tdd/estoque-tdd
+            artefato: semana10-estoque
+          - nome: "SEMANA 11 - integracao Spring Boot"
+            pasta: semana11-integracao-springboot
+            artefato: semana11-integracao-springboot
+
+    steps:
+      - name: Obter o codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar o Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      # Nos projetos da SEMANA 10 a fase 'verify' executa o jacoco:check,
+      # que reprova o build se a cobertura ficar abaixo de 100%.
+      - name: Executar os testes e a verificacao de cobertura
+        working-directory: ${{ matrix.pasta }}
+        run: mvn -B --no-transfer-progress verify
+
+      - name: Publicar o relatorio de cobertura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cobertura-${{ matrix.artefato }}
+          path: ${{ matrix.pasta }}/target/site/jacoco
+          if-no-files-found: warn
+
+      - name: Publicar os relatorios de teste
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-${{ matrix.artefato }}
+          path: ${{ matrix.pasta }}/target/surefire-reports
+          if-no-files-found: warn
