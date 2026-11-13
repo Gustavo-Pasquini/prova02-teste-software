@@ -1,0 +1,49 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< br.edu.exemplo:carrinho-compras-tdd >-----------------
+[INFO] Building Carrinho de Compras - TDD 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (prepare-agent) @ carrinho-compras-tdd ---
+[INFO] argLine set to -javaagent:/Users/gustavopasquini/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ carrinho-compras-tdd ---
+[INFO] skip non existing resourceDirectory /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ carrinho-compras-tdd ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ carrinho-compras-tdd ---
+[INFO] skip non existing resourceDirectory /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ carrinho-compras-tdd ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug target 17] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ carrinho-compras-tdd ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running br.edu.exemplo.CarrinhoTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in br.edu.exemplo.CarrinhoTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report) @ carrinho-compras-tdd ---
+[INFO] Loading execution data file /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/target/jacoco.exec
+[INFO] Analyzed bundle 'Carrinho de Compras - TDD' with 2 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.279 s
+[INFO] Finished at: 2026-11-12T21:55:36-03:00
+[INFO] ------------------------------------------------------------------------
