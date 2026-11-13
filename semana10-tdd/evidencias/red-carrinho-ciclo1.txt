@@ -1,0 +1,85 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< br.edu.exemplo:carrinho-compras-tdd >-----------------
+[INFO] Building Carrinho de Compras - TDD 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (prepare-agent) @ carrinho-compras-tdd ---
+[INFO] argLine set to -javaagent:/Users/gustavopasquini/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ carrinho-compras-tdd ---
+[INFO] skip non existing resourceDirectory /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ carrinho-compras-tdd ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ carrinho-compras-tdd ---
+[INFO] skip non existing resourceDirectory /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ carrinho-compras-tdd ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug target 17] to target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[21,35] cannot find symbol
+  symbol:   method getTotal()
+  location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[29,17] cannot find symbol
+  symbol:   method adicionar(br.edu.exemplo.Produto)
+  location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[31,37] cannot find symbol
+  symbol:   method getTotal()
+  location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[39,17] cannot find symbol
+  symbol:   method adicionar(br.edu.exemplo.Produto)
+  location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[40,17] cannot find symbol
+  symbol:   method adicionar(br.edu.exemplo.Produto)
+  location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[42,37] cannot find symbol
+  symbol:   method getTotal()
+  location: variable carrinho of type br.edu.exemplo.Carrinho
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.527 s
+[INFO] Finished at: 2026-11-12T21:54:25-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile (default-testCompile) on project carrinho-compras-tdd: Compilation failure: Compilation failure: 
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[21,35] cannot find symbol
+[ERROR]   symbol:   method getTotal()
+[ERROR]   location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[29,17] cannot find symbol
+[ERROR]   symbol:   method adicionar(br.edu.exemplo.Produto)
+[ERROR]   location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[31,37] cannot find symbol
+[ERROR]   symbol:   method getTotal()
+[ERROR]   location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[39,17] cannot find symbol
+[ERROR]   symbol:   method adicionar(br.edu.exemplo.Produto)
+[ERROR]   location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[40,17] cannot find symbol
+[ERROR]   symbol:   method adicionar(br.edu.exemplo.Produto)
+[ERROR]   location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] /Users/gustavopasquini/Downloads/Códigos/prova02-teste-software/semana10-tdd/carrinho-compras-tdd/src/test/java/br/edu/exemplo/CarrinhoTest.java:[42,37] cannot find symbol
+[ERROR]   symbol:   method getTotal()
+[ERROR]   location: variable carrinho of type br.edu.exemplo.Carrinho
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
